@@ -1,0 +1,4 @@
+# PubSub Channels
+NEW = "DATASET_NEW"
+UPDATES = "DATASET_UPDATES"
+
