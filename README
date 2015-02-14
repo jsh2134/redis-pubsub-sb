@@ -1,11 +1,13 @@
 Simple Redis Pub/Sub implementation for Solvebio depository changes
 
 
-SETUP AND INSTALL
+Setup and Install
+------------------
  pip install redis python-dateutil solvebio
  start redis-server locally
 
-RUN
+Run
+-----
  start listener
  $ python listener.py
 
