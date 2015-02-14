@@ -8,8 +8,15 @@ def listen(channels):
     ps.subscribe(channels)
     # Print messages
     for item in ps.listen():
-        # TODO send webhook/email/push
-        print "[%s] %s" % (item['channel'], item['data'])
+        alert(item['channel'], item['data'])
+
+def alert(channel, message):
+    # TODO get users subscribed to this channel
+    #   subscribers = get_subscribers(channel)
+    # TODO send webhook/email/push to each of them
+    #   for subscriber in subscribers:
+    #       subscriber.notify()
+    print "[%s] %s" % (channel, message)
 
 if __name__ == "__main__":
     # Listen for channel updates
