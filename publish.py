@@ -17,6 +17,7 @@ def iso_to_dt(isotime):
 def get_fresh_depos():
     """ return list of all solvebio depos """
     try:
+        print "Getting Latest Depository Info"
         depos = solvebio.Depository.all()
         return depos
     except urllib2.HTTPError as e:
@@ -25,6 +26,7 @@ def get_fresh_depos():
 
 def get_stored_depo_status(r):
     """ return a dict of stored depos {name:updated_timestamp} """
+    print "Getting Local Depositories status"
     stored_depos = r.smembers(DEPOS)
     pipe = r.pipeline()
     for depo in stored_depos:

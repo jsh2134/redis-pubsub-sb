@@ -9,9 +9,6 @@ Setup and Install
 
 Run
 -----
-* start listener
-    $ python listener.py
-
-* run publisher in new window
-    $ python publish.py
+* $ python listener.py
+* $ python publish.py
 

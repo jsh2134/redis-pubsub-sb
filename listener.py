@@ -11,6 +11,7 @@ class Listener(object):
 
     def listen(self):
         self.ps.subscribe(self.channels)
+        print "Listening on channels: %s" % ", ".join(self.channels)
         for item in self.ps.listen():
             self.alert(item['channel'], item['data'])
 
